@@ -405,13 +405,24 @@ details p {
         display: none !important;
     }
 
-    /* Hide all background watermarks on mobile for a clean, readable look */
+    /* Hide the muddy FAQ background watermarks */
     img[alt="Champagne Flutes"],
     img[alt="Balloons"],
     img[alt="Bar tools"],
-    img[alt="Drinks Illustration"],
-    img[alt="Martini Line Art"] {
+    img[alt="Drinks Illustration"] {
         display: none !important;
+    }
+
+    /* PRESERVE the Martini Line Art behind the Reviews */
+    img[alt="Martini Line Art"] {
+        display: block !important;
+        opacity: 0.2 !important; /* Keeps it subtle behind the review image */
+        position: absolute !important;
+        right: -30px !important;
+        top: 0 !important;
+        height: 100% !important; /* Stretches to fit the section */
+        width: auto !important;
+        max-width: none !important; /* Prevents it from getting squished */
     }
 
     /* 8. FOOTER FIXES */
