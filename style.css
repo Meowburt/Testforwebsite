@@ -260,6 +260,82 @@ details p {
     flex-direction: column;
     justify-content: space-between;
 }
+/* =========================================
+   MOBILE RESPONSIVENESS FIXES
+   ========================================= */
+@media (max-width: 850px) {
+    
+    /* 1. Fix the Header from overlapping */
+    header {
+        flex-direction: column !important;
+        position: relative !important; /* Un-fixes the header so it doesn't take up half the screen */
+        padding: 20px !important;
+        gap: 15px !important;
+        background-color: rgba(140, 115, 121, 1) !important; /* Solid color for readability */
+    }
+    
+    .nav-links, .socials-partners {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 12px !important;
+    }
+
+    /* Adjust top spacing since the header is no longer fixed */
+    section:first-of-type {
+        padding-top: 60px !important; 
+    }
+
+    /* 2. Remove the forced desktop widths */
+    div[style*="min-width: 400px"],
+    div[style*="min-width: 450px"],
+    div[style*="min-width: 350px"],
+    div[style*="min-width: 300px"] {
+        min-width: 100% !important;
+    }
+
+    /* 3. Stack all side-by-side layout sections vertically */
+    section > div, .white-card {
+        flex-direction: column !important;
+        gap: 40px !important;
+        padding: 30px 20px !important; /* Adds breathing room on mobile */
+    }
+
+    /* 4. Force grid columns (like What's Included & Gallery) into a single column */
+    div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* 5. Scale down the massive desktop typography */
+    h1 { font-size: 42px !important; line-height: 1.1 !important; }
+    h2 { font-size: 34px !important; line-height: 1.2 !important; }
+    
+    /* 6. Fix the Background Graphics (Balloons, Shakers, etc.) */
+    /* This fades them out to a faint watermark so the text remains 100% readable */
+    img[style*="position: absolute"] {
+        opacity: 0.15 !important;
+        width: 100% !important;
+        left: 0 !important;
+        top: 0 !important;
+        object-fit: contain !important;
+    }
+
+    /* 7. Ensure videos shrink properly */
+    video {
+        width: 100% !important;
+        height: auto !important;
+        min-width: 0 !important;
+    }
+
+    /* 8. Stack the Footer columns */
+    footer > div {
+        flex-direction: column !important;
+        gap: 40px !important;
+    }
+    footer > div > div {
+        width: 100% !important;
+        padding-right: 0 !important;
+    }
+}
 
 .review-stars {
     color: gold;
