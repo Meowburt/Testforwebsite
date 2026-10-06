@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Parties | Blaire's Mobile Bar</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1625877711459147');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1625877711459147&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- This forcefully hides any default browser arrows and overrides style.css injections -->
+    <style>
+        details > summary { list-style: none !important; outline: none; }
+        details > summary::-webkit-details-marker { display: none !important; }
+        details > summary::marker { display: none !important; content: "" !important; }
+        
+        details > summary::before,
+        details > summary::after { 
+            display: none !important; 
+            content: none !important; 
+        }
+    </style>
+<!-- Services Navigation Header (Transparent Mauve Background) -->
+    <header style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background-color: rgba(140, 115, 121, 0.4); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: space-between; padding: 15px 40px; box-sizing: border-box; font-family: Georgia, serif; border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+        
+        <!-- Styled Button: Back to Home -->
+        <a href="index.html" class="btn" style="background-color: transparent; border: 2px solid white; border-radius: 25px; font-family: Georgia, serif; text-transform: none; font-size: 18px; font-weight: normal; color: white; padding: 8px 24px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Home
+        </a>
+        
+        <!-- Service Specific Navigation Links (Make sure to update the underline for the active page!) -->
+        <ul class="nav-links" style="display: flex; gap: 35px; list-style: none; margin: 0; padding: 0; align-items: center;">
+            <li><a href="weddings.html" style="font-family: Georgia, serif; font-size: 18px; color: white; text-decoration: none; text-transform: none;">Weddings</a></li>
+            <li><a href="parties.html" style="font-family: Georgia, serif; font-size: 18px; color: white; text-decoration: none; text-transform: none;">Home Parties</a></li>
+            <li><a href="classes.html" style="font-family: Georgia, serif; font-size: 18px; color: white; text-decoration: none; text-transform: none;">Cocktail Classes</a></li>
+            <li><a href="corporate.html" style="font-family: Georgia, serif; font-size: 18px; color: white; text-decoration: none; text-transform: none;">Corporate Events</a></li>
+        </ul>
+        
+        <!-- Socials & Partners (White versions) -->
+        <div class="socials-partners" style="display: flex; align-items: center; gap: 15px; color: white;">
+            <a href="https://www.instagram.com/blaires_mobilebar/" target="_blank" style="color: white; text-decoration: none;">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@blaires.mobile.bar" target="_blank" style="color: white; text-decoration: none;">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.07-2.88-.52-4.11-1.28a7.86 7.86 0 01-1.79-1.57V15c-.01 1.4-.33 2.83-1.01 4.1-.73 1.35-1.92 2.47-3.37 3.05a8.77 8.77 0 01-6.14.07 8.52 8.52 0 01-3.67-2.65A8.77 8.77 0 01.32 15a8.88 8.88 0 013.22-7.16 8.52 8.52 0 016.14-1.64v4.06c-.95-.08-1.93.09-2.77.58-.87.51-1.48 1.45-1.6 2.46-.11.96.16 1.98.74 2.77s1.5 1.28 2.49 1.27a3.48 3.48 0 003.49-3.48V.02h.53z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/blaire-s-mobile-bar/" target="_blank" style="color: white; text-decoration: none;">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://letsbatch.com/experiences/fb91f2fe-104f-4f2c-a0b3-4a798e4db5f9" target="_blank" style="color: white; text-decoration: none; display: flex; align-items: center;">
+                <span style="font-family: Georgia, serif; font-size: 16px; font-weight: bold; margin-left: 5px;">batch</span>
+            </a>
+            <a href="https://www.thebash.com/bartender/blaire-s-mobile-bar-service" target="_blank" style="color: white; text-decoration: none; display: flex; align-items: center;">
+                <span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 9px; font-weight: bold; border: 1px solid white; border-radius: 50%; width: 26px; height: 26px; display: flex; align-items: center; justify-content: center; text-transform: uppercase; line-height: 1; text-align: center; margin-left: 5px;">the bash</span>
+            </a>
+            <a href="https://www.zola.com/wedding-vendors/wedding-bar-services/blaire-s-mobile-bar" target="_blank" style="color: white; text-decoration: none; display: flex; align-items: center;">
+                <span style="font-size: 20px; line-height: 1; margin-left: 5px;">♡♡</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section style="padding: 160px 20px 80px 20px; min-height: 80vh; display: flex; align-items: center;">
+            <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 60px;">
+                
+                <!-- Left Side: Typography and Button -->
+                <div style="flex: 1; min-width: 400px;">
+                    <div style="display: flex; align-items: center; gap: 8px; color: #2a2d5a; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-size: 13px; margin-bottom: 20px; font-weight: bold;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <span>Birthdays/Bachelorettes/Graduations/Baby Showers & More!</span>
+                    </div>
+
+                    <h1 style="font-family: Georgia, serif; font-size: 58px; color: #2a2d5a; margin: 0; font-weight: normal; line-height: 1.1;">A mobile bar</h1>
+                    <h2 style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 54px; color: #d16b8a; margin: 0 0 30px 0; font-weight: normal; letter-spacing: 1px;">made for life's<br>biggest moments</h2>
+
+                    <p style="font-family: 'Helvetica Neue', Helvetica, sans-serif; font-size: 17px; color: #2a2d5a; line-height: 1.6; margin-bottom: 40px; max-width: 500px;">
+                        Blaire's Mobile Bar was made for life's reason-to-celebrate moments. Whether you're toasting a new chapter, a big milestone, or simply getting your favorite people together, our handcrafted cocktails and TABC-certified bartenders help make every gathering feel a little more special.
+                    </p>
+
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <a href="quote.html" style="display: inline-flex; align-items: center; gap: 8px; background-color: #d16b8a; color: white; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px; padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: background-color 0.3s;">
+                            Get a Quote 
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <img src="images/Small Martinis for Home parts.png" alt="Martini Glasses" style="height: 60px;">
+                    </div>
+                </div>
+
+                <!-- Right Side: The Image -->
+                <div style="flex: 1; min-width: 400px; display: flex; justify-content: flex-end;">
+                    <img src="images/lake travis home party.png" alt="Lake Travis Party" style="width: 100%; max-width: 550px; height: 320px; border-radius: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); object-fit: cover;">
+                </div>
+            </div>
+        </section>
+
+        <!-- What's Included Card -->
+        <section style="padding: 0 20px 60px;">
+            <div class="white-card" style="display: flex; align-items: center; gap: 50px; text-align: left; max-width: 1100px; margin: 0 auto; background-color: white; border-radius: 40px; padding: 60px;">
+                
+                <div style="flex: 1;">
+                    <p style="font-family: Georgia, serif; font-size: 16px; color: #2a2d5a; margin-top: 0; margin-bottom: 10px;">What's Included</p>
+                    <h2 style="font-size: 46px; margin-top: 0; color: #2a2d5a; font-family: Georgia, serif; font-weight: normal; line-height: 1.1; margin-bottom: 20px;">Because every<br>milestone deserves a<br>toast.</h2>
+                    <p style="font-size: 18px; color: #d16b8a; line-height: 1.4; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-weight: normal; margin: 0;">Bar rental starts at $850 with your own alcohol, or<br>let us plan and pour the whole night. Questions on<br>pricing or mileage? Call 972-837-8254.</p>
+                </div>
+                
+                <div style="flex: 1.2;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; row-gap: 25px;">
+                        <div style="position: relative; background-color: #ebe3d5; border-radius: 15px; padding: 15px; display: flex; align-items: center; justify-content: center; text-align: center; min-height: 85px; box-sizing: border-box;">
+                            <div style="position: absolute; top: -10px; left: -10px; width: 24px; height: 24px; background-color: #d16b8a; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid white; box-sizing: border-box;">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <p style="margin: 0; color: #2a2d5a; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-size: 13px; font-weight: 500; line-height: 1.4;">Blaire's Mobile Bar,<br>delivered and beautifully<br>styled</p>
+                        </div>
+                        <div style="position: relative; background-color: #ebe3d5; border-radius: 15px; padding: 15px; display: flex; align-items: center; justify-content: center; text-align: center; min-height: 85px; box-sizing: border-box;">
+                            <div style="position: absolute; top: -10px; left: -10px; width: 24px; height: 24px; background-color: #d16b8a; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid white; box-sizing: border-box;">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <p style="margin: 0; color: #2a2d5a; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-size: 13px; font-weight: 500; line-height: 1.4;">Stress-free hosting from the<br>first sip to the last cheers</p>
+                        </div>
+                        <div style="position: relative; background-color: #ebe3d5; border-radius: 15px; padding: 15px; display: flex; align-items: center; justify-content: center; text-align: center; min-height: 85px; box-sizing: border-box;">
+                            <div style="position: absolute; top: -10px; left: -10px; width: 24px; height: 24px; background-color: #d16b8a; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid white; box-sizing: border-box;">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <p style="margin: 0; color: #2a2d5a; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-size: 13px; font-weight: 500; line-height: 1.4;">Full setup, service, and<br>cleanup</p>
+                        </div>
+                        <div style="position: relative; background-color: #ebe3d5; border-radius: 15px; padding: 15px; display: flex; align-items: center; justify-content: center; text-align: center; min-height: 85px; box-sizing: border-box;">
+                            <div style="position: absolute; top: -10px; left: -10px; width: 24px; height: 24px; background-color: #d16b8a; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid white; box-sizing: border-box;">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <p style="margin: 0; color: #2a2d5a; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-size: 13px; font-weight: 500; line-height: 1.4;">Serving celebrations<br>throughout DFW, HTX &<br>ATX</p>
+                        </div>
+                        <div style="position: relative; background-color: #ebe3d5; border-radius: 15px; padding: 15px; display: flex; align-items: center; justify-content: center; text-align: center; min-height: 85px; box-sizing: border-box;">
+                            <div style="position: absolute; top: -10px; left: -10px; width: 24px; height: 24px; background-color: #d16b8a; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid white; box-sizing: border-box;">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <p style="margin: 0; color: #2a2d5a; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-size: 13px; font-weight: 500; line-height: 1.4;">A fun focal point your<br>guests naturally gather<br>around</p>
+                        </div>
+                        <div style="position: relative; background-color: #ebe3d5; border-radius: 15px; padding: 15px; display: flex; align-items: center; justify-content: center; text-align: center; min-height: 85px; box-sizing: border-box;">
+                            <div style="position: absolute; top: -10px; left: -10px; width: 24px; height: 24px; background-color: #d16b8a; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid white; box-sizing: border-box;">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <p style="margin: 0; color: #2a2d5a; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-size: 13px; font-weight: 500; line-height: 1.4;">TABC-certified bartenders<br>who keep the good times<br>flowing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+       <!-- FAQ Section with Balloon illustration contained strictly inside the pink background -->
+        <section style="background-color: #fcbcd4; max-width: 1050px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; padding: 60px 20px 100px 20px; position: relative; z-index: 1;">
+            
+            <div style="flex: 1; position: relative; min-width: 300px;">
+                <p style="font-family: Georgia, serif; font-size: 14px; color: #2a2d5a; margin: 0 0 5px 0;">FAQ</p>
+                <h2 style="font-size: 48px; margin-top: 0; color: #2a2d5a; font-family: Georgia, serif; font-weight: normal; margin-bottom: 20px;">Good to know</h2>
+                
+                <!-- Balloons Graphic shifted up and slightly downscaled to never bleed onto the white section -->
+                <img src="images/Ballons for home parties.png" alt="Balloons" style="position: absolute; left: -100px; top: -100px; width: 600px; max-width: none; z-index: -1; pointer-events: none; opacity: 0.95;">
+            </div>
+
+            <div style="flex: 1.5; min-width: 450px; position: relative; z-index: 2;">
+                <div style="border-top: 1px solid rgba(42, 45, 90, 0.2); display: flex; flex-direction: column;">
+                    
+                    <details style="padding: 20px 0; border-bottom: 1px solid rgba(42, 45, 90, 0.2);">
+                        <summary style="cursor: pointer; display: flex; gap: 15px; align-items: flex-start; outline: none;">
+                            <div style="flex-shrink: 0; padding-top: 2px;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2a2d5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                            </div>
+                            <p style="margin: 0; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-weight: bold; font-size: 15px; color: #2a2d5a;">Can you match my party theme?</p>
+                        </summary>
+                        <div style="padding-left: 39px; margin-top: 5px;">
+                            <p style="margin-top: 5px; color: #2a2d5a; line-height: 1.6;">Of course! From a disco birthday, pink bachelorette weekend, tropical pool party, or elegant bridal shower, we'll tailor the drink experience to match your celebration!</p>
+                        </div>
+                    </details>
+
+                    <details style="padding: 20px 0; border-bottom: 1px solid rgba(42, 45, 90, 0.2);">
+                        <summary style="cursor: pointer; display: flex; gap: 15px; align-items: flex-start; outline: none;">
+                            <div style="flex-shrink: 0; padding-top: 2px;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2a2d5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                            </div>
+                            <p style="margin: 0; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-weight: bold; font-size: 15px; color: #2a2d5a;">Can we create signature cocktails?</p>
+                        </summary>
+                        <div style="padding-left: 39px; margin-top: 5px;">
+                            <p style="margin-top: 5px; color: #2a2d5a; line-height: 1.6;">Absolutely! Whether it's a birthday margarita, a "Mom-osa" bar for a baby shower, or a themed cocktail for your bachelorette weekend, we'll help create drinks that match your celebration!</p>
+                        </div>
+                    </details>
+
+                    <details style="padding: 20px 0; border-bottom: 1px solid rgba(42, 45, 90, 0.2);">
+                        <summary style="cursor: pointer; display: flex; gap: 15px; align-items: flex-start; outline: none;">
+                            <div style="flex-shrink: 0; padding-top: 2px;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2a2d5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                            </div>
+                            <p style="margin: 0; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-weight: bold; font-size: 15px; color: #2a2d5a;">What types of parties do you serve?</p>
+                        </summary>
+                        <div style="padding-left: 39px; margin-top: 5px;">
+                            <p style="margin-top: 5px; color: #2a2d5a; line-height: 1.6;">Just about any reason to celebrate! We love serving birthdays, graduations, bachelorette parties, bridal showers, baby showers, gender reveals, engagement parties, holiday gatherings, and backyard celebrations!</p>
+                        </div>
+                    </details>
+                    
+                    <details style="padding: 20px 0; border-bottom: 1px solid rgba(42, 45, 90, 0.2);">
+                        <summary style="cursor: pointer; display: flex; gap: 15px; align-items: flex-start; outline: none;">
+                            <div style="flex-shrink: 0; padding-top: 2px;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2a2d5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                            </div>
+                            <p style="margin: 0; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-weight: bold; font-size: 15px; color: #2a2d5a;">Can Blaire's Mobile Bar set up at a private residence?</p>
+                        </summary>
+                        <div style="padding-left: 39px; margin-top: 5px;">
+                            <p style="margin-top: 5px; color: #2a2d5a; line-height: 1.6;">Yes! Backyard parties, driveway celebrations, pool parties, and at-home events are some of our favorites. We'll work with you to determine the best setup location for your space.</p>
+                        </div>
+                    </details>
+                    
+                    <details style="padding: 20px 0; border-bottom: 1px solid rgba(42, 45, 90, 0.2);">
+                        <summary style="cursor: pointer; display: flex; gap: 15px; align-items: flex-start; outline: none;">
+                            <div style="flex-shrink: 0; padding-top: 2px;">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2a2d5a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                            </div>
+                            <p style="margin: 0; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-weight: bold; font-size: 15px; color: #2a2d5a;">When should I book for our celebration?</p>
+                        </summary>
+                        <div style="padding-left: 39px; margin-top: 5px;">
+                            <p style="margin-top: 5px; color: #2a2d5a; line-height: 1.6;">The sooner, the better! Popular weekends, holidays, graduation season, and spring celebrations tend to book quickly. We recommend reserving your date as early as possible (at least 3-4 weeks in advance) to secure availability.</p>
+                        </div>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+        <!-- Standalone, non-conjoined white check your date card -->
+        <section style="padding: 0 20px 80px 20px; position: relative; z-index: 5;">
+            <div class="white-card" style="padding: 60px; max-width: 800px; margin: 0 auto; text-align: center; background-color: white; border-radius: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
+                <h2 style="font-size: 36px; margin-top: 0; margin-bottom: 10px; color: #2a2d5a; font-family: Georgia, serif; font-weight: normal;">Check your Date!</h2>
+                <p style="margin-bottom: 30px; color: #d16b8a; line-height: 1.6; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-size: 15px;">Give us the details, we'll handle the drinks. Share your wedding date, venue, and guest count, and we'll create a bar experience that's perfectly suited to your celebration.</p>
+                <a href="quote.html" class="btn" onclick="fbq('track', 'Contact');" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; background-color: #d16b8a; color: white; padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: bold; width: fit-content; margin: 0 auto; font-family: 'Helvetica Neue', Helvetica, sans-serif;">
+                    Get a Quote 
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- White Bottom Section -->
+        <div style="background-color: white; border-top-left-radius: 40px; border-top-right-radius: 40px; padding: 60px 20px 80px 20px; position: relative; z-index: 5;">
+            
+
+            <!-- Home Party Gallery & Navigation Buttons -->
+            <div style="max-width: 1200px; margin: 0 auto;">
+                
+                <h2 style="color: #2a2d5a; font-family: Georgia, serif; font-weight: normal; margin-bottom: 40px; font-size: 36px; text-align: center;">Home Party Bar Gallery</h2>
+                
+                <img src="images/home party gallery.png" alt="Home Party Gallery" style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                
+                <!-- Bottom Navigation Buttons -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px;">
+                    
+                    <!-- Left Nav Button -->
+                    <a href="weddings.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid #d16b8a; color: #d16b8a; background-color: transparent; padding: 10px 25px; border-radius: 30px; text-decoration: none; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                        Weddings 
+                    </a>
+
+                    <!-- Right Nav Button -->
+                    <a href="classes.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid #d16b8a; color: #d16b8a; background-color: transparent; padding: 10px 25px; border-radius: 30px; text-decoration: none; font-family: 'Helvetica Neue', Helvetica, sans-serif; font-size: 16px;">
+                        Cocktail Classes 
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Bulletproof Footer -->
+    <footer style="background-color: #f6c5d4; padding: 100px 40px 40px; font-family: Georgia, serif; color: #2a2d5a; position: relative; z-index: 1;">
+        
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start;">
+            
+            <div style="width: 40%; padding-right: 40px;">
+                <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                    <div style="display: flex; flex-direction: column; justify-content: center;">
+                        <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 46px; font-weight: bold; margin: 0; color: #2a2d5a; line-height: 0.9; letter-spacing: 1px;">Blaire's</h2>
+                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; letter-spacing: 4px; margin: 4px 0 0 2px; color: #2a2d5a; font-weight: 500;">MOBILE BAR</p>
+                    </div>
+                    <img src="images/Small Martini on top of weddings.png" alt="Martini Graphic" style="height: 50px; margin-left: 15px; opacity: 0.9;">
+                </div>
+                
+                <p style="font-size: 17px; line-height: 1.6; color: #2a2d5a; margin: 0; max-width: 380px;">
+                    A stylish mobile bar bringing handcrafted cocktails, certified bartenders, and unforgettable party vibes to events across DFW and beyond.
+                </p>
+            </div>
+
+            <div style="width: 30%;">
+                <h4 style="font-size: 18px; font-weight: normal; text-decoration: underline; text-underline-offset: 6px; margin-top: 0; margin-bottom: 30px; color: #2a2d5a;">Areas & Services</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.3; font-size: 17px;">
+                    <li style="color: #2a2d5a;">Dallas Fort-Worth</li>
+                    <li style="color: #2a2d5a;">Houston</li>
+                    <li style="color: #2a2d5a;">Austin</li>
+                    <li><a href="index.html" style="color: #2a2d5a; text-decoration: none;">Homepage</a></li>
+                    <li><a href="quote.html" style="color: #2a2d5a; text-decoration: none;">Free Inquiry/Quote</a></li>
+                    <li><a href="about.html" style="color: #2a2d5a; text-decoration: none;">About Us</a></li>
+                    <li><a href="about.html" style="color: #2a2d5a; text-decoration: none;">FAQ</a></li>
+                    <li><a href="services.html" style="color: #2a2d5a; text-decoration: none;">Weddings</a></li>
+                    <li><a href="services.html" style="color: #2a2d5a; text-decoration: none;">Home Parties</a></li>
+                    <li><a href="services.html" style="color: #2a2d5a; text-decoration: none;">Cocktail Classes</a></li>
+                    <li><a href="services.html" style="color: #2a2d5a; text-decoration: none;">Corporate Events</a></li>
+                </ul>
+            </div>
+
+            <div style="width: 30%;">
+                <h4 style="font-size: 18px; font-weight: normal; text-decoration: underline; text-underline-offset: 6px; margin-top: 0; margin-bottom: 30px; color: #2a2d5a;">Get In Touch</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.3; font-size: 17px;">
+                    <li style="color: #2a2d5a;">972 837 8254</li>
+                    <li><a href="mailto:blairekunardevents@gmail.com" style="color: #2a2d5a; text-decoration: none;">blairekunardevents@gmail.com</a></li>
+                    <li><a href="https://www.instagram.com/blaires_mobilebar/" target="_blank" style="color: #2a2d5a; text-decoration: none;">@blaires_mobilebar</a></li>
+                    <li><a href="quote.html" style="color: #2a2d5a; text-decoration: none;">Request an Inquiry</a></li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <div style="max-width: 1200px; margin: 60px auto 0; padding-top: 0;">
+            <p style="font-size: 13px; color: #2a2d5a; margin: 0;">
+                © 2026 Blaire's Mobile Bar &middot; Dallas–Fort Worth, Houston, Austin, TX &middot; TABC-certified
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
