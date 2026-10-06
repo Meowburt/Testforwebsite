@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcohol Calculator | Blaire's Mobile Bar</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1625877711459147');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1625877711459147&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Your Global Website Styles -->
+    <link rel="stylesheet" href="style.css?v=2">
+
+    <!-- TAILWIND CSS (This is what makes the calculator pink and perfectly styled!) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'site-pink': '#fcbcd4',
+                        'site-navy': '#2a2d5a',
+                        'site-navy-hover': '#1a1c3b',
+                        'site-pink-border': '#eba5bd',
+                        'error-red': '#ef4444'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background-color: rgba(140, 115, 121, 0.4); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: space-between; padding: 15px 40px; box-sizing: border-box; font-family: Georgia, serif; border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
+        
+        <!-- Styled Button -->
+        <a href="calculator.html" class="btn" style="background-color: transparent; border: 2px solid white; border-radius: 10px; font-family: Georgia, serif; text-transform: none; font-size: 18px; font-weight: normal; color: white; padding: 10px 24px; text-decoration: none; display: inline-block;">Alcohol Calculator</a>
+        
+        <!-- Navigation Links -->
+        <ul class="nav-links" style="display: flex; gap: 35px; list-style: none; margin: 0; padding: 0; align-items: center;">
+            <li><a href="index.html" style="font-family: Georgia, serif; font-size: 18px; color: white; text-decoration: none; text-transform: none;">Home</a></li>
+            <li><a href="quote.html" style="font-family: Georgia, serif; font-size: 18px; color: white; text-decoration: none; text-transform: none;">Free Inquiry/Quote</a></li>
+            <li><a href="about.html" style="font-family: Georgia, serif; font-size: 18px; color: white; text-decoration: none; text-transform: none;">About Us & FAQs</a></li>
+            <li><a href="services.html" style="font-family: Georgia, serif; font-size: 18px; color: white; text-decoration: none; text-transform: none;">Services</a></li>
+        </ul>
+        
+        <!-- Socials & Partners (Linked) -->
+        <div class="socials-partners" style="display: flex; align-items: center; gap: 15px; color: white;">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/blaires_mobilebar/" target="_blank" style="color: white; text-decoration: none;">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <!-- TikTok -->
+            <a href="https://tiktok.com/@blaires.mobile.bar" target="_blank" style="color: white; text-decoration: none;">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.07-2.88-.52-4.11-1.28a7.86 7.86 0 01-1.79-1.57V15c-.01 1.4-.33 2.83-1.01 4.1-.73 1.35-1.92 2.47-3.37 3.05a8.77 8.77 0 01-6.14.07 8.52 8.52 0 01-3.67-2.65A8.77 8.77 0 01.32 15a8.88 8.88 0 013.22-7.16 8.52 8.52 0 016.14-1.64v4.06c-.95-.08-1.93.09-2.77.58-.87.51-1.48 1.45-1.6 2.46-.11.96.16 1.98.74 2.77s1.5 1.28 2.49 1.27a3.48 3.48 0 003.49-3.48V.02h.53z"/></svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/company/blaire-s-mobile-bar/" target="_blank" style="color: white; text-decoration: none;">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <!-- Batch -->
+            <a href="https://letsbatch.com/experiences/fb91f2fe-104f-4f2c-a0b3-4a798e4db5f9" target="_blank" style="color: white; text-decoration: none; display: flex; align-items: center;">
+                <span style="font-family: Georgia, serif; font-size: 16px; font-weight: bold; margin-left: 5px;">batch</span>
+            </a>
+            <!-- THE BASH badge -->
+            <a href="https://www.thebash.com/bartender/blaire-s-mobile-bar-service" target="_blank" style="color: white; text-decoration: none; display: flex; align-items: center;">
+                <span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 9px; font-weight: bold; border: 1px solid white; border-radius: 50%; width: 26px; height: 26px; display: flex; align-items: center; justify-content: center; text-transform: uppercase; line-height: 1; text-align: center; margin-left: 5px;">the bash</span>
+            </a>
+            <!-- Zola (Double Hearts) -->
+            <a href="https://www.zola.com/wedding-vendors/wedding-bar-services/blaire-s-mobile-bar" target="_blank" style="color: white; text-decoration: none; display: flex; align-items: center;">
+                <span style="font-size: 20px; line-height: 1; margin-left: 5px;">♡♡</span>
+            </a>
+        </div>
+        
+    </header>
+
+    <!-- Pushes the calculator down so the header doesn't cover it -->
+    <main style="padding-top: 140px; padding-bottom: 80px; display: flex; justify-content: center; min-height: 100vh; box-sizing: border-box;">
+        
+        <!-- Calculator Main Container (Pink Background) -->
+        <div class="bg-site-pink rounded-2xl shadow-xl border border-site-pink-border p-6 md:p-8 w-full max-w-lg" style="margin: 0 20px; height: fit-content;">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-site-navy" style="font-family: 'Playfair Display', serif;">Bar Stock Calculator</h2>
+                <p class="text-sm text-site-navy opacity-80 mt-2 font-serif">Find out exactly how much alcohol and mixers to buy for your event.</p>
+            </div>
+
+            <form id="alcoholForm" class="space-y-6" onsubmit="event.preventDefault(); calculateAlcohol();">
+                
+                <!-- Basic Event Info -->
+                <div class="space-y-4 font-sans">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label for="guests" class="block text-sm font-semibold text-site-navy mb-1">Guest Count</label>
+                            <input type="number" id="guests" min="1" class="w-full px-4 py-2 bg-white text-site-navy border border-white rounded-lg focus:ring-2 focus:ring-site-navy focus:border-site-navy outline-none transition shadow-sm" placeholder="e.g. 100" required>
+                        </div>
+                        <div>
+                            <label for="hours" class="block text-sm font-semibold text-site-navy mb-1">Hours</label>
+                            <input type="number" id="hours" min="1" step="0.5" class="w-full px-4 py-2 bg-white text-site-navy border border-white rounded-lg focus:ring-2 focus:ring-site-navy focus:border-site-navy outline-none transition shadow-sm" placeholder="e.g. 5" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="drinkerType" class="block text-sm font-semibold text-site-navy mb-1">Guest Drinking Habits</label>
+                        <select id="drinkerType" class="w-full px-4 py-2 bg-white text-site-navy border border-white rounded-lg focus:ring-2 focus:ring-site-navy focus:border-site-navy outline-none transition shadow-sm">
+                            <option value="average">Average (1 drink/hr)</option>
+                            <option value="light">Light (0.75 drinks/hr)</option>
+                            <option value="heavy">Heavy (1.5 drinks/hr)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Custom Drink Distribution -->
+                <div class="border-t border-site-navy/20 pt-5 mt-5 font-sans">
+                    <label class="block text-sm font-bold text-site-navy mb-3">Overall Distribution (%)</label>
+                    <div class="flex space-x-3">
+                        <div class="w-1/3">
+                            <label class="block text-xs font-medium text-site-navy mb-1">Beer</label>
+                            <input type="number" id="beerPct" value="25" min="0" max="100" class="w-full px-3 py-2 bg-white text-site-navy border border-white rounded-lg focus:ring-2 focus:ring-site-navy outline-none transition shadow-sm">
+                        </div>
+                        <div class="w-1/3">
+                            <label class="block text-xs font-medium text-site-navy mb-1">Liquor</label>
+                            <input type="number" id="liqPct" value="50" min="0" max="100" class="w-full px-3 py-2 bg-white text-site-navy border border-white rounded-lg focus:ring-2 focus:ring-site-navy outline-none transition shadow-sm">
+                        </div>
+                        <div class="w-1/3">
+                            <label class="block text-xs font-medium text-site-navy mb-1">Wine</label>
+                            <input type="number" id="winePct" value="25" min="0" max="100" class="w-full px-3 py-2 bg-white text-site-navy border border-white rounded-lg focus:ring-2 focus:ring-site-navy outline-none transition shadow-sm">
+                        </div>
+                    </div>
+                    <p id="distError" class="text-sm font-bold text-error-red text-center hidden mt-3">Warning: Overall Distribution percentages must add up to exactly 100%.</p>
+                </div>
+
+                <!-- Custom Wine Breakdown -->
+                <div class="border-t border-site-navy/20 pt-5 font-sans">
+                    <label class="block text-sm font-bold text-site-navy mb-3">Wine Breakdown (%)</label>
+                    <div class="flex space-x-3">
+                        <div class="w-1/3">
+                            <label class="block text-xs font-medium text-site-navy mb-1">Red</label>
+                            <input type="number" id="redPct" value="50" min="0" max="100" class="w-full px-3 py-2 bg-white text-site-navy border border-white rounded-lg focus:ring-2 focus:ring-site-navy outline-none transition shadow-sm">
+                        </div>
+                        <div class="w-1/3">
+                            <label class="block text-xs font-medium text-site-navy mb-1">White</label>
+                            <input type="number" id="whitePct" value="40" min="0" max="100" class="w-full px-3 py-2 bg-white text-site-navy border border-white rounded-lg focus:ring-2 focus:ring-site-navy outline-none transition shadow-sm">
+                        </div>
+                        <div class="w-1/3">
+                            <label class="block text-xs font-medium text-site-navy mb-1">Rosé/Spark.</label>
+                            <input type="number" id="rosePct" value="10" min="0" max="100" class="w-full px-3 py-2 bg-white text-site-navy border border-white rounded-lg focus:ring-2 focus:ring-site-navy outline-none transition shadow-sm">
+                        </div>
+                    </div>
+                    <p id="wineError" class="text-sm font-bold text-error-red text-center hidden mt-3">Warning: Wine Breakdown percentages must add up to exactly 100%.</p>
+                </div>
+
+                <!-- Champagne Toast -->
+                <div class="flex items-center pt-2 font-sans">
+                    <input type="checkbox" id="toast" class="w-4 h-4 text-site-navy bg-white border-white rounded focus:ring-site-navy transition shadow-sm">
+                    <label for="toast" class="ml-2 block text-sm font-medium text-site-navy">Include a separate Champagne Toast?</label>
+                </div>
+
+                <button type="submit" class="w-full bg-site-navy hover:bg-site-navy-hover text-white font-semibold py-3 rounded-lg transition duration-200 mt-6 shadow-md" style="background-color: #2a2d5a;">
+                    Calculate My List
+                </button>
+            </form>
+
+            <!-- Results Section (Hidden by default) -->
+            <div id="results" class="mt-8 hidden bg-white/70 backdrop-blur-sm p-6 rounded-xl border border-white/50 transition-all shadow-sm font-sans">
+                <h3 class="text-lg font-bold text-site-navy mb-4 border-b border-site-navy/20 pb-2">Your Shopping List</h3>
+                
+                <div class="space-y-4 text-sm text-site-navy">
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-site-navy">Total Estimated Drinks:</span>
+                        <span id="resTotal" class="font-bold text-site-navy bg-white px-3 py-1 rounded-full border border-white shadow-sm"></span>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="bg-white p-3 rounded-lg shadow-sm border border-white">
+                            <span id="lblBeer" class="block text-xs text-site-navy/60 uppercase font-bold">Beer (25%)</span>
+                            <span id="resBeer" class="block text-lg font-black text-site-navy mt-1"></span>
+                            <span class="text-[10px] text-site-navy/60 font-medium">bottles / cans</span>
+                        </div>
+                        
+                        <div class="bg-white p-3 rounded-lg shadow-sm border border-white">
+                            <span id="lblLiquor" class="block text-xs text-site-navy/60 uppercase font-bold">Liquor (50%)</span>
+                            <span id="resLiquor" class="block text-lg font-black text-site-navy mt-1"></span>
+                            <span class="text-[10px] text-site-navy/60 font-medium">bottles (19 servings)</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-white mt-2">
+                        <span id="lblWine" class="block text-xs text-site-navy/60 uppercase font-bold mb-3">Wine (25%)</span>
+                        <div class="flex justify-between text-sm mb-2 pb-2 border-b border-site-navy/10">
+                            <span class="font-medium text-site-navy"><span id="lblRed">Red</span>:</span> 
+                            <span id="resRed" class="font-bold text-site-navy"></span>
+                        </div>
+                        <div class="flex justify-between text-sm mb-2 pb-2 border-b border-site-navy/10">
+                            <span class="font-medium text-site-navy"><span id="lblWhite">White</span>:</span> 
+                            <span id="resWhite" class="font-bold text-site-navy"></span>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <span class="font-medium text-site-navy"><span id="lblRose">Rosé/Sparkling</span>:</span> 
+                            <span id="resRose" class="font-bold text-site-navy"></span>
+                        </div>
+                        <p class="text-[10px] text-site-navy/50 mt-3 text-right font-medium">*Calculated as 750ml bottles (approx 5 glasses/btl)</p>
+                    </div>
+
+                    <!-- Mixers Section -->
+                    <div class="bg-white p-4 rounded-lg shadow-sm border border-white mt-2">
+                        <span class="block text-xs text-site-navy/60 uppercase font-bold mb-3">Mixers & Water</span>
+                        <p class="text-[11px] text-site-navy/60 mb-3 leading-tight border-b border-site-navy/10 pb-2 font-medium">Based on liquor servings. Rounded up per bottle sizing.</p>
+                        
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                            <div class="flex justify-between text-sm">
+                                <span class="font-medium text-site-navy">Cola <span class="text-[9px] text-site-navy/50">(2L)</span></span> 
+                                <span id="resCola" class="font-bold text-site-navy"></span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="font-medium text-site-navy">Diet Cola <span class="text-[9px] text-site-navy/50">(2L)</span></span> 
+                                <span id="resDiet" class="font-bold text-site-navy"></span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="font-medium text-site-navy">Tonic <span class="text-[9px] text-site-navy/50">(2L)</span></span> 
+                                <span id="resTonic" class="font-bold text-site-navy"></span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="font-medium text-site-navy">Soda Wtr <span class="text-[9px] text-site-navy/50">(2L)</span></span> 
+                                <span id="resSoda" class="font-bold text-site-navy"></span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="font-medium text-site-navy">Ginger Ale <span class="text-[9px] text-site-navy/50">(2L)</span></span> 
+                                <span id="resGinger" class="font-bold text-site-navy"></span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="font-medium text-site-navy">Juices <span class="text-[9px] text-site-navy/50">(1L)</span></span> 
+                                <span id="resJuice" class="font-bold text-site-navy"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between text-sm mt-3 pt-3 border-t border-site-navy/10">
+                            <span class="text-site-navy font-bold">Bottled Water <span class="text-[9px] text-site-navy/50 font-medium">(1 serving/btl)</span></span> 
+                            <span id="resWater" class="font-black text-site-navy"></span>
+                        </div>
+                    </div>
+
+                    <!-- Champagne Toast Box -->
+                    <div id="champagneBox" class="bg-white p-3 rounded-lg shadow-sm border border-white flex justify-between items-center hidden">
+                        <div>
+                            <span class="block text-xs text-site-navy/60 uppercase font-bold">Champagne Toast</span>
+                            <span class="text-[10px] text-site-navy/50 font-medium">750ml bottles</span>
+                        </div>
+                        <span id="resChampagne" class="text-lg font-black text-site-navy"></span>
+                    </div>
+                    <div class="text-center pt-4 pb-2">
+                        <span class="text-lg font-bold text-site-navy">🥂 Cheers!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="background-color: #f6c5d4; padding: 100px 40px 40px; font-family: Georgia, serif; color: #2a2d5a; position: relative; z-index: 1;">
+        
+        <!-- Strict 3-Column Layout -->
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start;">
+            
+            <!-- Column 1: Logo & Bio (40% width) -->
+            <div style="width: 40%; padding-right: 40px;">
+                <!-- Logo Area -->
+                <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                    <div style="display: flex; flex-direction: column; justify-content: center;">
+                        <h2 style="font-family: 'Playfair Display', Georgia, serif; font-size: 46px; font-weight: bold; margin: 0; color: #2a2d5a; line-height: 0.9; letter-spacing: 1px;">Blaire's</h2>
+                        <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; letter-spacing: 4px; margin: 4px 0 0 2px; color: #2a2d5a; font-weight: 500;">MOBILE BAR</p>
+                    </div>
+                    <!-- Martini Graphic -->
+                    <img src="images/Small Martini on top of weddings.png" alt="Martini Graphic" style="height: 50px; margin-left: 15px; opacity: 0.9;">
+                </div>
+                
+                <!-- Bio Text -->
+                <p style="font-size: 17px; line-height: 1.6; color: #2a2d5a; margin: 0; max-width: 380px;">
+                    A stylish mobile bar bringing handcrafted cocktails, certified bartenders, and unforgettable party vibes to events across DFW and beyond.
+                </p>
+            </div>
+
+            <!-- Column 2: Areas & Services (30% width) -->
+            <div style="width: 30%;">
+                <h4 style="font-size: 18px; font-weight: normal; text-decoration: underline; text-underline-offset: 6px; margin-top: 0; margin-bottom: 30px; color: #2a2d5a;">Areas & Services</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.3; font-size: 17px;">
+                    <li style="color: #2a2d5a;">Dallas Fort-Worth</li>
+                    <li style="color: #2a2d5a;">Houston</li>
+                    <li style="color: #2a2d5a;">Austin</li>
+                    <li><a href="index.html" style="color: #2a2d5a; text-decoration: none;">Homepage</a></li>
+                    <li><a href="quote.html" style="color: #2a2d5a; text-decoration: none;">Free Inquiry/Quote</a></li>
+                    <li><a href="about.html" style="color: #2a2d5a; text-decoration: none;">About Us</a></li>
+                    <li><a href="about.html" style="color: #2a2d5a; text-decoration: none;">FAQ</a></li>
+                    <li><a href="services.html" style="color: #2a2d5a; text-decoration: none;">Weddings</a></li>
+                    <li><a href="services.html" style="color: #2a2d5a; text-decoration: none;">Home Parties</a></li>
+                    <li><a href="services.html" style="color: #2a2d5a; text-decoration: none;">Cocktail Classes</a></li>
+                    <li><a href="services.html" style="color: #2a2d5a; text-decoration: none;">Corporate Events</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Get In Touch (30% width) -->
+            <div style="width: 30%;">
+                <h4 style="font-size: 18px; font-weight: normal; text-decoration: underline; text-underline-offset: 6px; margin-top: 0; margin-bottom: 30px; color: #2a2d5a;">Get In Touch</h4>
+                <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.3; font-size: 17px;">
+                    <li style="color: #2a2d5a;">972 837 8254</li>
+                    <li><a href="mailto:blaire@blairesmobilebar.com" style="color: #2a2d5a; text-decoration: none;">blaire@blairesmobilebar.com</a></li>
+                    <li><a href="https://www.instagram.com/blaires_mobilebar/" target="_blank" style="color: #2a2d5a; text-decoration: none;">@blaires_mobilebar</a></li>
+                    <li><a href="quote.html" style="color: #2a2d5a; text-decoration: none;">Request an Inquiry</a></li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <!-- Bottom Copyright Line -->
+        <div style="max-width: 1200px; margin: 60px auto 0; padding-top: 0;">
+            <p style="font-size: 13px; color: #2a2d5a; margin: 0;">
+                © 2026 Blaire's Mobile Bar &middot; Dallas–Fort Worth, Houston, Austin, TX &middot; TABC-certified
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function calculateAlcohol() {
+            // Clear previous results on submit
+            document.getElementById('results').classList.add('hidden');
+
+            // Inputs
+            const guests = parseInt(document.getElementById('guests').value) || 0;
+            const hours = parseFloat(document.getElementById('hours').value) || 0;
+            const drinkerType = document.getElementById('drinkerType').value;
+            const hasToast = document.getElementById('toast').checked;
+
+            // Distribution Percentages
+            const beerPct = parseInt(document.getElementById('beerPct').value) || 0;
+            const liqPct = parseInt(document.getElementById('liqPct').value) || 0;
+            const winePct = parseInt(document.getElementById('winePct').value) || 0;
+
+            // Wine Breakdown Percentages
+            const redPct = parseInt(document.getElementById('redPct').value) || 0;
+            const whitePct = parseInt(document.getElementById('whitePct').value) || 0;
+            const rosePct = parseInt(document.getElementById('rosePct').value) || 0;
+
+            let hasError = false;
+
+            // Validation: Do they equal exactly 100%?
+            // Warning is only shown when they don't add up to 100%.
+            if ((beerPct + liqPct + winePct) !== 100) {
+                document.getElementById('distError').classList.remove('hidden');
+                hasError = true;
+            } else {
+                document.getElementById('distError').classList.add('hidden');
+            }
+
+            if ((redPct + whitePct + rosePct) !== 100) {
+                document.getElementById('wineError').classList.remove('hidden');
+                hasError = true;
+            } else {
+                document.getElementById('wineError').classList.add('hidden');
+            }
+
+            if (hasError) {
+                // If there is an error, results section remains hidden.
+                return;
+            }
+
+            // --- Continuation of Calculation Logic if percentages are valid ---
+
+            // Base drinks per hour multiplier
+            let multiplier = 1; 
+            if (drinkerType === 'light') multiplier = 0.75;
+            if (drinkerType === 'heavy') multiplier = 1.5;
+
+            // Total general drinks
+            const totalDrinks = Math.ceil(guests * hours * multiplier);
+
+            // Calculate exact drink splits
+            const beerDrinks = totalDrinks * (beerPct / 100);
+            const liquorDrinks = totalDrinks * (liqPct / 100);
+            const wineDrinks = totalDrinks * (winePct / 100);
+
+            // Quantities
+            const beerBottles = Math.ceil(beerDrinks);
+            
+            // Wine: 5 glasses per 750ml bottle
+            const wineBottlesTotal = Math.ceil(wineDrinks / 5);
+            
+            // Sub-divide wine bottles
+            const redWine = Math.ceil(wineBottlesTotal * (redPct / 100));
+            const whiteWine = Math.ceil(wineBottlesTotal * (whitePct / 100));
+            let roseWine = wineBottlesTotal - redWine - whiteWine;
+            if (roseWine < 0) roseWine = 0; 
+            
+            // Liquor: 19 mixed drinks per bottle
+            const liquorBottles = Math.ceil(liquorDrinks / 19);
+
+            // --- Mixers Logic ---
+            const colaServings = liquorDrinks * 0.15;
+            const dietServings = liquorDrinks * 0.15;
+            const tonicServings = liquorDrinks * 0.20;
+            const sodaServings = liquorDrinks * 0.20;
+            const gingerServings = liquorDrinks * 0.10;
+            const juiceServings = liquorDrinks * 0.20;
+
+            // Divide by specific servings per container
+            const colaBottles = Math.ceil(colaServings / 12);
+            const dietBottles = Math.ceil(dietServings / 12);
+            const tonicBottles = Math.ceil(tonicServings / 12);
+            const sodaBottles = Math.ceil(sodaServings / 12);
+            const gingerBottles = Math.ceil(gingerServings / 12);
+            const juiceBottles = Math.ceil(juiceServings / 6);
+            
+            // Water: standard 1 bottle per guest
+            const waterBottles = guests; 
+
+            // Populate Main Results
+            document.getElementById('resTotal').innerText = totalDrinks;
+            document.getElementById('resBeer').innerText = beerBottles;
+            document.getElementById('resLiquor').innerText = liquorBottles;
+            document.getElementById('resRed').innerText = redWine + " btls";
+            document.getElementById('resWhite').innerText = whiteWine + " btls";
+            document.getElementById('resRose').innerText = roseWine + " btls";
+
+            // Populate Mixers
+            document.getElementById('resCola').innerText = colaBottles;
+            document.getElementById('resDiet').innerText = dietBottles;
+            document.getElementById('resTonic').innerText = tonicBottles;
+            document.getElementById('resSoda').innerText = sodaBottles;
+            document.getElementById('resGinger').innerText = gingerBottles;
+            document.getElementById('resJuice').innerText = juiceBottles;
+            document.getElementById('resWater').innerText = waterBottles;
+
+            // Update Labels
+            document.getElementById('lblBeer').innerText = `Beer (${beerPct}%)`;
+            document.getElementById('lblLiquor').innerText = `Liquor (${liqPct}%)`;
+            document.getElementById('lblWine').innerText = `Wine (${winePct}%)`;
+            
+            document.getElementById('lblRed').innerText = `Red (${redPct}%)`;
+            document.getElementById('lblWhite').innerText = `White (${whitePct}%)`;
+            document.getElementById('lblRose').innerText = `Rosé/Sparkling (${rosePct}%)`;
+
+            // Champagne Logic
+            const champBox = document.getElementById('champagneBox');
+            if (hasToast) {
+                const champagneBottles = Math.ceil(guests / 6);
+                document.getElementById('resChampagne').innerText = champagneBottles;
+                champBox.classList.remove('hidden');
+            } else {
+                champBox.classList.add('hidden');
+            }
+
+            // Show results section
+            document.getElementById('results').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
