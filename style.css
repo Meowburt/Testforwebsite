@@ -373,17 +373,13 @@ details p {
         display: none !important;
     }
 
-    /* Faded FAQ & Background watermarks */
+    /* Hide all background watermarks on mobile for a clean, readable look */
     img[alt="Champagne Flutes"],
     img[alt="Balloons"],
     img[alt="Bar tools"],
     img[alt="Drinks Illustration"],
     img[alt="Martini Line Art"] {
-        opacity: 0.1 !important;
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
+        display: none !important;
     }
 
     /* 7. FOOTER FIXES */
