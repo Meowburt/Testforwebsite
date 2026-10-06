@@ -342,3 +342,69 @@ details p {
     font-size: 20px;
     margin-top: 15px;
 }
+/* =========================================
+   HOME PAGE MOBILE RESPONSIVENESS FIXES
+   ========================================= */
+@media (max-width: 850px) {
+    
+    /* 1. Fix Hero Section Button & Image Offsets */
+    .hero img {
+        left: 0 !important;
+        max-width: 90% !important;
+        height: auto !important;
+        margin: 0 auto 30px !important;
+        display: block !important;
+    }
+    .hero a.btn {
+        position: relative !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        display: inline-block !important;
+    }
+
+    /* 2. Fix the "What it's Like" Container */
+    /* Removes the hardcoded 650px height so the box can stretch to fit everything */
+    div[style*="height: 650px"] {
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px !important;
+        padding-bottom: 40px !important;
+    }
+    
+    /* 3. Make the floating White Card sit naturally */
+    /* Removes the hardcoded 480px width */
+    div[style*="width: 480px"] {
+        position: relative !important;
+        width: 100% !important;
+        top: 0 !important;
+        left: 0 !important;
+        box-sizing: border-box !important;
+        padding: 30px 20px !important;
+    }
+
+    /* 4. Fix the Polaroids */
+    /* Brings the polaroids into the normal vertical flow instead of floating off-screen */
+    img[alt="Polaroid Collage"] {
+        position: relative !important;
+        right: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+
+    /* 5. Tame the Background Graphics */
+    /* Turns the overlapping decorations into soft watermarks so they don't break the layout */
+    img[alt="Olive Graphic"],
+    img[alt="Labels and Arrows"],
+    img[alt="Disco Ball Graphic"],
+    img[alt="Drinks Graphic"] {
+        opacity: 0.15 !important;
+        max-width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        transform: none !important;
+        margin: 0 auto !important;
+    }
+}
